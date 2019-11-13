@@ -67,7 +67,7 @@
 			nameCheck: function() {
 				var name = document.getElementById('logusername').value;
 				if(!(/^[a-z][a-zA-Z0-9\-]{8,16}$/.test(name))) {
-					//					alert("用户名不合格，请输入8到16位（开头为字母） ");
+					//					alert("用。。。户名不合格，请输入8到16位（开头为字母） ");
 					this.namemsg = "用户名不合格，请输入8到16位（开头为字母）"
 					return;
 
