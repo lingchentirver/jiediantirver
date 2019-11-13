@@ -2,7 +2,7 @@
  * @Author: 李太白
  * @Date: 2019-11-05 00:12:16
  * @LastEditors: 李太白
- * @LastEditTime: 2019-11-12 11:13:35
+ * @LastEditTime: 2019-11-13 14:46:54
  * @Description: 
  -->
 
@@ -12,55 +12,71 @@
             <img class="leftimg" src="../assets/img/banner1a.jpg" alt="">
             <img class="rightimg" src="../assets/img/banner2a.jpg" alt="">
         </div>
-        <div class="banner"> 
-            <img class="bannerImg" src="../assets/img/xiangqing_banner1.jpg" alt="">
-            <img class="bannerImg" src="../assets/img/xiangqing_banner2.jpg" alt="">
-            <img class="bannerImg" src="../assets/img/xiangqing_banner3.jpg" alt="">
-            <img class="bannerImg" src="../assets/img/xiangqing_banner4.jpg" alt="">
-            <img class="bannerImg" src="../assets/img/xiangqing_banner5.jpg" alt="">
+        <div class="banner">
+            <ul>
+                <li v-for="(bannerimg,index) in bannerimgs" :key="index">
+                <img :src="bannerimg.src" >
+                </li>
+            </ul>
         </div>
         <div class="banner_information">
             <div class="nav">
-                <h1>醉美太白|康养太白·养生温泉+住星级酒店+品“段不老”山珍药膳一票畅玩~</h1>
-                <div class="dengzhi"><h2>398</h2><h3>CNY</h3><h4>起</h4><p>等值说明</p></div>
+                <h1>{{tour.name}}</h1>
+                <div class="dengzhi"><h2>{{tour.price}}</h2><h3>CNY</h3><h4>起</h4><p>等值说明</p></div>
                 <div class="dengzhiA"><span>等值于398 CEEC</span><span>等值于44719.1TNW</span></div>
             </div>
         </div>
         <div class="nav1">
             <div class="nav1a">
                 <div class="nav1a_1">
-                    <span>线路安排:</span><p>杀杀杀水水水水水水杀杀水水水水水水杀杀水水水水水水</p>
+                    <span>线路安排:</span><p>{{tour.router}}</p>
                 </div>    
                 <div class="nav1a_1">
-                    <span>行程天数:</span><p>2222222222222</p>
+                    <span>行程天数:</span><p>{{tour.days}}</p>
                 </div>    
                 <div class="nav1a_1">
-                    <span>集合信息:</span><div class="h5"><h5>10:10</h5><p>自驾</p></div>
+                    <span>集合信息:</span><div class="h5"><h5>{{tour.time}}</h5><p>{{tour.address}}</p></div>
                 </div>    
             </div>
         </div>
     </div>
 </template>
-<script src="../dist/js/swiper.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true
-    });
-    </script>
 <script>
+import axios from 'axios';
 export default {
-//     name:'xiangqing',
-//     data () {
-//     return {
-
-//     }
-//   },
-//   methods{
-    
-//   }
+    name:'xiangqingtop',
+    props:['cid'],
+    data () {
+    return {
+          bannerimgs:[
+              
+          ],
+          tour:{}
+    }
+  },
+  created() {
+    fetch('http://localhost:3000/bannerimgs')
+      .then(res=>{
+        return res.json();
+      })
+      .then(data=>{
+          this.bannerimgs = data;
+        //   console.log(this.bannerimgs)
+     })
+     .catch(err=>{
+       console.log(err);
+     });
+    //  console.log(this.cid);
+     //从后端获取数据     
+     axios.get('api/tour/'+"?cid="+this.cid)
+     .then(res=>{ 
+         console.log(res.data[0]);
+         this.tour = res.data[0];
+     })
+     .catch(err=>{
+         console.log(err);
+     });
+  },
 }
 </script>
 <style scoped>
@@ -88,16 +104,19 @@ export default {
     height: .3rem;
     border-radius: 50%;
 }
-.banner{
+
+.banner ul{
     width: 100%;
     height: 2.625rem;
-    position: relative; 
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto;   
 }
-
-.bannerImg{
-    width: 100%;
+.banner li{
+    width :100%;
+    height: 100%;
+}
+.banner img{
+    width: 3.75rem;
     height: 100%;
 }
 
