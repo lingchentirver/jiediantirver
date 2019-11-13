@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * @Author: your name
  * @Date: 2019-11-06 19:44:29
@@ -6,6 +7,8 @@
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段d:\jiedianlvxing\config\index.js
  */
+=======
+>>>>>>> a37c03fbfa01f8b3b226ac633397c5e88f77165e
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
@@ -19,6 +22,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+<<<<<<< HEAD
       '/api': {
         target: '10.35.161.67',
         changeOrigin: true,
@@ -30,12 +34,26 @@ module.exports = {
 
     // Various Dev Server settings
     host: '10.35.161.67', // can be overwritten by process.env.HOST
+=======
+    	'/api': {
+				target: '10.35.161.7',
+				changeOrigin: true,
+				pathRewrite: {
+					'^/api': '/api'
+				}
+			}
+    },
+
+    // Various Dev Server settings
+    host: '10.35.161.7', // can be overwritten by process.env.HOST
+>>>>>>> a37c03fbfa01f8b3b226ac633397c5e88f77165e
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
+<<<<<<< HEAD
     // Use Eslint Loader?
     // If true, your code will be linted during bundling and
     // linting errors and warnings will be shown in the console.
@@ -44,6 +62,9 @@ module.exports = {
     // in the browser.
     showEslintErrorsInOverlay: false,
 
+=======
+    
+>>>>>>> a37c03fbfa01f8b3b226ac633397c5e88f77165e
     /**
      * Source Maps
      */
