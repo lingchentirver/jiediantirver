@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 /*
- * @Author: your name
- * @Date: 2019-11-06 19:44:29
- * @LastEditTime: 2019-11-11 21:31:21
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \第三阶段d:\jiedianlvxing\config\index.js
+ * @Author: 李太白
+ * @Date: 2019-11-04 17:16:01
+ * @LastEditors: 李太白
+ * @LastEditTime: 2019-11-13 19:05:21
+ * @Description: 
  */
-=======
->>>>>>> a37c03fbfa01f8b3b226ac633397c5e88f77165e
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
@@ -21,60 +17,26 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-<<<<<<< HEAD
     proxyTable: {
-<<<<<<< HEAD
       '/api': {
-        target: '10.35.161.67',
+        target: 'http://localhost:3000'
+        ,
         changeOrigin: true,
         pathRewrite: {
-         	 '^/api': ''
+        '^/api': ''
         }
-      }
+        }
     },
-
-    // Various Dev Server settings
-    host: '10.35.161.67', // can be overwritten by process.env.HOST
-=======
-    	'/api': {
-				target: '10.35.161.7',
-				changeOrigin: true,
-				pathRewrite: {
-					'^/api': '/api'
-				}
-			}
-    },
-
-    // Various Dev Server settings
-    host: '10.35.161.7', // can be overwritten by process.env.HOST
-<<<<<<< HEAD
-=======
-    proxyTable: {},
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
->>>>>>> libai
-=======
->>>>>>> a37c03fbfa01f8b3b226ac633397c5e88f77165e
->>>>>>> 545295d91aa9126a592fe8ed632c92e8bb2e9cf1
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-<<<<<<< HEAD
-    // Use Eslint Loader?
-    // If true, your code will be linted during bundling and
-    // linting errors and warnings will be shown in the console.
-    useEslint: false,
-    // If true, eslint errors and warnings will also be shown in the error overlay
-    // in the browser.
-    showEslintErrorsInOverlay: false,
-
-=======
     
->>>>>>> a37c03fbfa01f8b3b226ac633397c5e88f77165e
     /**
      * Source Maps
      */
@@ -121,3 +83,4 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report
   }
 }
+

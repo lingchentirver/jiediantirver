@@ -2,21 +2,21 @@
  * @Author: 李太白
  * @Date: 2019-11-08 19:52:27
  * @LastEditors: 李太白
- * @LastEditTime: 2019-11-11 14:19:51
+ * @LastEditTime: 2019-11-13 16:56:10
  * @Description: 
  -->
  <template>
   <div>
     <myselftop></myselftop>
     <myselfnav></myselfnav>
-    <Footer></Footer>
+    <indexFooter></indexFooter>
   </div>
 </template>
 
 <script>
 import myselftop from '../components/myselftop';
 import myselfnav from '../components/myselfnav';
-import Footer from '../components/Footer';
+import indexFooter from '../components/indexFooter';
 
 export default {
   name: 'sweet',
@@ -28,7 +28,7 @@ export default {
   components:{
      myselftop:myselftop,
      myselfnav:myselfnav,
-     Footer:Footer,
+     indexFooter:indexFooter,
   }
 }
 </script>

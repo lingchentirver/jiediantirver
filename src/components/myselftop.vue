@@ -2,8 +2,8 @@
  * @Author: 李太白
  * @Date: 2019-11-05 00:12:16
  * @LastEditors: 李太白
- * @LastEditTime: 2019-11-11 14:23:05
- * @Description: 
+ * @LastEditTime: 2019-11-13 17:12:38
+ * @Description: myselftop
  -->
 
 <template>
@@ -15,12 +15,20 @@
         </div>
         <div class="box2">
             <div class="box2a">
-                <img class="img4" src="../assets/img/my4.jpg" alt="">
+                <router-link to="login">
+                  <img class="img4" src="../assets/img/my4.jpg" alt="">
+                </router-link>
+
                 <div class="use">
-                    <div class="username"><h1>节点用户</h1><p>910010</p></div>
-                    <span>粉丝  0</span>
-                    <span>粉丝  0</span>
-                    <span>粉丝  0</span>
+                    <router-link to="login">
+                    <div class="username">
+                        <h1>节点用户</h1><p>910010</p>
+                    </div>
+                    </router-link>
+                    
+                        <span>粉丝  0</span>
+                        <span>粉丝  0</span>
+                        <span>粉丝  0</span>
                 </div>  
                 <div class="rightBox">
                 <div class="img5" ><img  src="../assets/img/my5.jpg" alt=""></div> 

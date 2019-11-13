@@ -2,7 +2,7 @@
  * @Author: 李太白
  * @Date: 2019-11-05 00:12:16
  * @LastEditors: 李太白
- * @LastEditTime: 2019-11-11 11:16:07
+ * @LastEditTime: 2019-11-13 16:40:13
  * @Description: 
  -->
 
@@ -10,7 +10,9 @@
     <div class="navBox">
         <div class="nav">
             <ul class="nav1">
+              <router-link to="Order">
               <li><img src="../assets/img/j5.png" alt=""><p>全部订单</p> </li>
+              </router-link>
               <li><img src="../assets/img/j1.png" alt=""><p>待付款</p></li>
               <li><img src="../assets/img/j2.png" alt=""><p>待处理</p></li>
               <li><img src="../assets/img/j3.png" alt=""><p>待评价</p></li>

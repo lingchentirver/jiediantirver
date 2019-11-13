@@ -1,9 +1,11 @@
 <template>
 	<div class="nav">
 			<ul class="nav1_ul">
+				<router-link to="Travel">
 				<li><img src="../assets/img/programme_shangye.png" />
 					<p>旅行</p>
 				</li>
+				</router-link>
 				<li><img src="../assets/img/programme_shangcheng.png" />
 					<p>商城</p>
 				</li>

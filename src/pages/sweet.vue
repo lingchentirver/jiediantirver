@@ -2,7 +2,7 @@
  * @Author: 李太白
  * @Date: 2019-11-08 19:52:27
  * @LastEditors: 李太白
- * @LastEditTime: 2019-11-09 15:03:08
+ * @LastEditTime: 2019-11-13 16:30:32
  * @Description: 
  -->
  <template>
@@ -10,7 +10,7 @@
     <sweettop></sweettop>
     <sweetcenter></sweetcenter>
     <sweetNav></sweetNav>
-    <Footer></Footer>
+    <indexFooter></indexFooter>
   </div>
 </template>
 
@@ -18,7 +18,7 @@
 import sweettop from '../components/sweettop';
 import sweetcenter from '../components/sweetcenter';
 import sweetNav from '../components/sweetNav';
-import Footer from '../components/Footer';
+import indexFooter from '../components/indexFooter';
 
 export default {
   name: 'sweet',
@@ -31,7 +31,7 @@ export default {
      sweettop:sweettop,
      sweetcenter:sweetcenter,
      sweetNav:sweetNav,
-     Footer:Footer
+     indexFooter:indexFooter
   }
 }
 </script>

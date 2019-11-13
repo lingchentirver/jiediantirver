@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2019-11-12 21:49:56
- * @LastEditTime: 2019-11-13 12:03:54
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-13 18:54:32
+ * @LastEditors: 李太白
  * @Description: In User Settings Edit
  * @FilePath: \第三阶段d:\jiedianlvxing\src\components\Tlist1.vue
  -->
@@ -10,19 +10,21 @@
     <div class="box">
         <div style="display:none" >{{typename}}</div>
             <div class="box3" v-for="(item,index) in tours" :key="index" @click="getBooksByType(item.cid)">
-                <div class="left">
-                    <img :src="item.pic" alt="">
-                </div>
-                <div class="right">
-                    <div class="right1">
-                        <p class="g">{{item.name}}</p>
-                        <p class="x">{{item.router}}</p>
-                        <div class="right11">
-                            <p>{{item.price}}</p>
-                            <img src="../assets/img/Xiao3.jpg" alt="">
+                <router-link :to='"/xiangqing/"+item.cid'>
+                    <div class="left">
+                        <img :src="item.pic" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="right1">
+                            <p class="g">{{item.name}}</p>
+                            <p class="x">{{item.router}}</p>
+                            <div class="right11">
+                                <p>{{item.price}}</p>
+                                <img src="../assets/img/Xiao3.jpg" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
+                </router-link>
             </div>
     </div>
 </template>
@@ -43,7 +45,7 @@ export default {
         })
         .then(data=>{
             this.tour = data;
-            this.tours = this.getBooksByType(this.tour);
+            this.tours = this.getBooksByType();
             console.log(this.tours);
         })
         .catch(err=>{
@@ -52,15 +54,15 @@ export default {
     },
     beforeUpdate(){
         console.log("数据更新了------------：");
-        this.tours = this.getBooksByType(this.tour);
+        this.tours = this.getBooksByType();
     },
     methods:{
-        getBooksByType(data){//根据类型获取数据
+        getBooksByType(){//根据类型获取数据
             let arr=[];
-            for(let i in data){
-                if(data[i].cid==this.typename){
-                    console.log(data[i].cid)
-                    arr.push(data[i]);
+            console.log(this.tour);
+            for(let i in this.tour){
+                if(this.tour[i].cid==this.typename){
+                    arr.push(this.tour[i]);
                 }
             }
             return arr;
@@ -78,10 +80,11 @@ export default {
     height:1.47rem;
     margin-top:5px;
     margin-bottom:0.16rem;
-    display:flex;
-    justify-content: space-between;
+    /* display:-webkit-flex;
+    justify-content: space-between; */
 }
 .left{
+    float: left;
     width:1.6rem;
     height:1.47rem;
 }
@@ -92,13 +95,16 @@ export default {
     margin-top:4px;;
 }
 .right{
-    width:2.1rem;
+    float: left;
+    width:1.9rem;
     height:1.47rem;
+    margin-left:0.15rem;
+
 }
 .right1{
     width:1.9rem;
     height:1.47rem;
-    margin-right:0.2rem;
+   
 }
 .g{
     width:1.9rem;
