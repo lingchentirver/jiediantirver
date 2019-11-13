@@ -72,7 +72,7 @@
 					return;
 
 				}
-				this.namemsg = "用户名合格"
+				this.namemsg = "用户名111合格"
 
 			},
 			passCheck: function() {
