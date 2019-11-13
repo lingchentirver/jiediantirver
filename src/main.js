@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+<<<<<<< HEAD
 import ElementUI from 'element-ui'; 
 import 'element-ui/lib/theme-chalk/index.css'; 
 Vue.use(ElementUI);
@@ -11,6 +12,11 @@ import { Swipe, SwipeItem } from 'mint-ui';
 
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+=======
+
+Vue.config.productionTip = false
+
+>>>>>>> libai
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

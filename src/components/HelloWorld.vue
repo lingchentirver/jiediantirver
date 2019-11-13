@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -80,22 +81,53 @@
         </a>
       </li>
     </ul>
+=======
+<!--
+ * @Author: your name
+ * @Date: 2019-11-04 17:16:01
+ * @LastEditTime: 2019-11-05 08:45:13
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \tongzhend:\workspace\workspace\src\components\HelloWorld.vue
+ -->
+<template>
+  <div>
+    <top></top>
+    <center></center>
+>>>>>>> libai
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
+=======
+import top from './top';
+import center from './center';
+
+>>>>>>> libai
 export default {
   name: 'HelloWorld',
   data () {
     return {
+<<<<<<< HEAD
       msg: 'Welcome to Your Vue.js App'
     }
+=======
+      msgleft: '0.00',
+      msgright: '0.00',
+    }
+  },
+  components:{
+     top:top,
+     center:center
+>>>>>>> libai
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+<<<<<<< HEAD
 h1, h2 {
   font-weight: normal;
 }
@@ -110,4 +142,7 @@ li {
 a {
   color: #42b983;
 }
+=======
+
+>>>>>>> libai
 </style>

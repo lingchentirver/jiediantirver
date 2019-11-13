@@ -10,6 +10,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+<<<<<<< HEAD
     proxyTable: {
     	'/api': {
 				target: '10.35.161.7',
@@ -22,6 +23,12 @@ module.exports = {
 
     // Various Dev Server settings
     host: '10.35.161.7', // can be overwritten by process.env.HOST
+=======
+    proxyTable: {},
+
+    // Various Dev Server settings
+    host: 'localhost', // can be overwritten by process.env.HOST
+>>>>>>> libai
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
